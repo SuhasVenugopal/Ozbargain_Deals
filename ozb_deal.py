@@ -5,9 +5,15 @@ import requests
 from bs4 import BeautifulSoup
 
 def send_email(subject, body):
+    recipients = [
+        "suhasmaggevenugopal@gmail.com",
+        "s4190225@student.rmit.edu.au"
+    ]
+
+
     message = Mail(
         from_email='hitlerkiller11@gmail.com',
-        to_emails='suhasmaggevenugopal@gmail.com',
+        to_emails=recipients,
         subject=subject,
         plain_text_content=body
     )
